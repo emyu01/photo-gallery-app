@@ -10,6 +10,7 @@ export class PhotoService {
   public photos: Photo[] = [];
 
   constructor() { }
+
   public async addNewToGallery() {
   // Take a photo
   const capturedPhoto = await Camera.getPhoto({
@@ -21,7 +22,12 @@ export class PhotoService {
     filepath: 'soon...',
     webviewPath: capturedPhoto.webPath
   });
-}
+  }
+
+private async savePicture(cameraPhoto: CameraPhoto) {
+
+  }
+
 }
 
 export interface Photo {
